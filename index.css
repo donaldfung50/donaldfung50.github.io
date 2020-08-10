@@ -37,6 +37,7 @@ hr {
 
 li:hover .course_dropdown {
     display : block;
+    cursor: pointer;
 }
 
 figure {
