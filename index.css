@@ -1,0 +1,418 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
+h2 {
+    font-size: 50px;
+    color: rgb(34, 163, 159);
+    text-align: center;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 28px;
+    color: rgb(34, 163, 159);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-top: 15px;
+}
+
+hr {
+    margin: 40px 0px;
+    border-color: #727878;
+    opacity: 0.2;
+    border-top: 1px solid #eee;
+}
+
+li:hover .course_dropdown {
+    display : block;
+}
+
+figure {
+    position: relative;
+}
+
+@keyframes growHR {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 33%;
+  }
+}
+
+@keyframes growDesc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideNav{
+   0% {
+        transform: translateX(300%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.navigation {
+    animation: 0.75s ease-out 0s 1 slideNav ;
+    position: fixed;
+    right: 30px;
+    top: 300px;
+}
+
+.navigation a{
+    border-radius: 100%;
+    background-color: rgba(204,204,204,0.5);
+    border: 2px solid rgba(34, 163, 159,0);
+    display: block;
+    margin-bottom: 18px;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    background-clip: padding-box;
+    transition: all 0.3s;
+}
+
+.navigation a.active, .navigation a:hover {
+    border: 2px solid rgba(34, 163, 159,0.7);
+}
+
+.bg {
+    background-image: url('pics/ny1.png');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: rgba(120, 117, 104, 0.6);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.textheader {
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hrheader {
+    animation: 1.5s ease-out 0s 1 growHR ;
+    position: absolute;
+    color: white;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+    opacity: 0.3;
+}
+
+.descheader {
+    animation: 2s ease-out 0s 1 growDesc ;
+    position: absolute;
+    color: white;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+
+.section-w {
+    background: white;
+}
+
+.section-b {
+    background: rgba(243,239,224);
+}
+
+.section-last {
+    background: rgb(67,66,66);
+}
+
+.container {
+    width: 810px;
+    margin: auto;
+    overflow: auto;
+}
+
+.profile_ele {
+    float: left;
+    max-width: 60%;
+    margin-left: 5%
+}
+
+.profile_row {
+    height: 300px;
+}
+
+.experiences, .exp_row {
+    overflow:auto;
+}
+
+.experiences {
+    padding-bottom: 5%;
+}
+
+.exp_left {
+    width: 33%;
+    float: left;
+}
+
+.exp_right {
+    width: 67%;
+    float: left;
+}
+
+.exp_period {
+    margin: 0 0 10px;
+}
+
+.exp_desc {
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.course_col {
+    overflow: auto;
+    font-size: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.no_bullets {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.course_panel {
+    background-color: rgba(238,238,238,0);
+    padding-left: 7px;
+}
+
+.course_panel:hover {
+    background-color: rgb(242,242,242);
+}
+
+.course_panel_active {
+    background-color: rgb(230,230,230);
+    padding-left: 7px;
+}
+
+.course_title {
+    display: inline-block;
+    width: 97%;
+}
+
+.course_dropdown {
+    display: block;
+    float: right;
+    min-width: 15px;
+}
+
+.course_info {
+    display: none;
+    overflow: hidden;
+    padding: 0 18px;
+}
+
+.course_tech {
+    margin-bottom: 0px; 
+    margin-top: 3px;
+}
+
+.course_grade {
+    margin-top: 0px;
+    margin-bottom: 3px; 
+}
+
+.arrow_down {
+    border: solid rgb(34, 163, 159);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow_up {
+    border: solid rgb(34, 163, 159);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+
+.project {
+    overflow: hidden;
+    position: relative;
+    /*box-sizing: border-box;*/
+}
+
+.fig_spacer {
+    width: 45%;
+    float: left;
+    padding: 20px 0px 20px 30px;
+}
+
+.fig_spacer2 {
+    width: 45%;
+    margin: auto;
+    padding: 20px 0px 50px 30px;
+}
+
+.project_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(34, 163, 159, 0.0);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;  
+}
+
+.project:hover .project_overlay {
+    background-color: rgba(34, 163, 159, 0.8);
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project_info {
+    padding: 0px 30px 10px 30px;
+}
+
+.project h3 {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    display: none;
+    /*position: absolute;
+    text-align: left;
+    display: block;*/
+    /*top: 0px;
+    left: 0px;*/
+}
+
+.project:hover h3 {
+    display: block;
+}
+
+.project hr {
+    margin: 10px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    height: 1px;
+    opacity: 0;
+    margin-left:0;
+    width : 0%;
+    -webkit-transition: width 0.7s ease-in;
+    -moz-transition: width 0.7s ease-in;
+    transition: width 0.7s ease-in;
+}
+
+.project:hover hr{
+    width:100%;
+    opacity: 1;
+}
+
+.project p {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    -moz-transform: translate3d(110%, 0, 0);
+    -webkit-transform: translate3d(110%, 0, 0);
+    transform: translate3d(110%, 0, 0);
+}
+
+.project:hover p {
+    -moz-transform: translate3d(0%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+    -moz-transition: all .7s;
+    -webkit-transition: all .7s;
+    transition: all .7s;
+}
+
+.project_row {
+    overflow: auto;
+}
+
+.contact_col {
+    overflow: auto;
+    width: 50%;
+    float: left;
+}
+
+.contact_li {
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.contact_li:hover {
+    opacity: 1;
+}
+
+.contact_col a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact_col i {
+    font-size: 36px;
+    color: white;
+    margin-right: 15px;
+}
+
+.contact_col span {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#contact h2 {
+    color: white;
+}
+
+
+#img01 {
+    border-radius: 50%;
+    border-color: rgba(243,239,224);
+    border-width: 15px;
+    border-style: solid;
+}
+
+#coursework {
+    padding-bottom: 3%;
+}
