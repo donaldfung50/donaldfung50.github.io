@@ -222,11 +222,13 @@ figure {
 
 .course_panel:hover {
     background-color: rgb(242,242,242);
+    cursor: pointer;
 }
 
 .course_panel_active {
     background-color: rgb(230,230,230);
     padding-left: 7px;
+    cursor: pointer;
 }
 
 .course_title {
